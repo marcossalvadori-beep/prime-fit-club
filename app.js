@@ -2,10 +2,12 @@
 // 1) CONFIGURAÇÃO DO SUPABASE
 // ============================
 // Substitua pelos valores do seu projeto Supabase
-const SUPABASE_URL = "COLOQUE_AQUI_SUA_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "COLOQUE_AQUI_SUA_SUPABASE_ANON_KEY";
+const SUPABASE_URL = window.__ENV?.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_ANON_KEY = window.__ENV?.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+
 
 // ============================
 // 2) LINKS DE PAGAMENTO (MERCADO PAGO OU OUTRO)
