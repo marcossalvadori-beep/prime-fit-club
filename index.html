@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRIME FIT CLUB</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">PF</div>
+      <div class="brand-text">
+        <div class="title">PRIME FIT CLUB</div>
+        <div class="subtitle">Treinos simples. Resultado real.</div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button class="btn ghost" id="btnGoLogin">Entrar</button>
+      <button class="btn" id="btnGoSignup">Começar</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HOME / VENDAS -->
+    <section class="screen" id="screenHome">
+      <h1>Treine no celular. Sem personal caro.</h1>
+      <p class="lead">
+        Treinos prontos para você seguir em casa ou na academia. Acesso imediato após pagamento.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>📦 Treinos prontos</h3>
+          <p>Planos por objetivo: iniciante, emagrecimento e hipertrofia.</p>
+        </div>
+        <div class="card">
+          <h3>🔒 Acesso com login</h3>
+          <p>Área do aluno protegida. Tudo organizado e fácil.</p>
+        </div>
+        <div class="card">
+          <h3>📱 100% mobile</h3>
+          <p>Botões grandes, sem texto demais, feito pro celular.</p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <button class="btn big" id="btnHomeStart">Criar conta e acessar</button>
+        <a class="link" id="btnHomePlans" href="#plans">Ver planos</a>
+      </div>
+
+      <div class="plans" id="plans">
+        <div class="plan">
+          <div class="plan-name">Mensal</div>
+          <div class="plan-price">R$ 39</div>
+          <div class="plan-desc">Acesso total por 30 dias</div>
+          <button class="btn full" id="btnBuyMonthly">Assinar</button>
+        </div>
+        <div class="plan">
+          <div class="plan-name">Trimestral</div>
+          <div class="plan-price">R$ 99</div>
+          <div class="plan-desc">Acesso total por 90 dias</div>
+          <button class="btn full" id="btnBuyQuarter">Assinar</button>
+        </div>
+        <div class="plan">
+          <div class="plan-name">Anual</div>
+          <div class="plan-price">R$ 299</div>
+          <div class="plan-desc">Acesso total por 365 dias</div>
+          <button class="btn full" id="btnBuyYear">Assinar</button>
+        </div>
+      </div>
+
+      <div class="note">
+        *Pagamento/renovação pode ser via link (ex.: Hotmart / Mercado Pago / Stripe). Neste MVP, o botão abre o link.
+      </div>
+    </section>
+
+    <!-- LOGIN -->
+    <section class="screen hidden" id="screenLogin">
+      <h2>Entrar</h2>
+      <form class="form" id="formLogin">
+        <label>E-mail</label>
+        <input type="email" id="loginEmail" placeholder="seuemail@email.com" required />
+        <label>Senha</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" required />
+        <button class="btn full" type="submit">Entrar</button>
+        <button class="btn ghost full" type="button" id="btnToSignup">Não tenho conta</button>
+      </form>
+      <p class="muted" id="loginMsg"></p>
+    </section>
+
+    <!-- SIGNUP -->
+    <section class="screen hidden" id="screenSignup">
+      <h2>Criar conta</h2>
+      <form class="form" id="formSignup">
+        <label>Nome</label>
+        <input type="text" id="signupName" placeholder="Seu nome" required />
+        <label>E-mail</label>
+        <input type="email" id="signupEmail" placeholder="seuemail@email.com" required />
+        <label>Senha</label>
+        <input type="password" id="signupPassword" placeholder="Crie uma senha" minlength="6" required />
+        <button class="btn full" type="submit">Criar conta</button>
+        <button class="btn ghost full" type="button" id="btnToLogin">Já tenho conta</button>
+      </form>
+      <p class="muted" id="signupMsg"></p>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="screen hidden" id="screenDashboard">
+      <div class="dash-head">
+        <div>
+          <h2 class="no-margin">Área do aluno</h2>
+          <p class="muted" id="userLine"></p>
+        </div>
+        <button class="btn ghost" id="btnLogout">Sair</button>
+      </div>
+
+      <div class="status" id="subStatus"></div>
+
+      <h3 class="section-title">Meus treinos</h3>
+      <div class="cards" id="workoutsGrid"></div>
+    </section>
+
+    <!-- PAYWALL -->
+    <section class="screen hidden" id="screenPaywall">
+      <h2>Seu acesso está expirado</h2>
+      <p class="lead">
+        Renove para liberar todos os treinos. É rápido e barato.
+      </p>
+      <button class="btn big full" id="btnRenew">Renovar acesso</button>
+      <button class="btn ghost full" id="btnBackHome">Voltar</button>
+      <p class="muted" id="paywallMsg"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> PRIME FIT CLUB • Feito para mobile</span>
+  </footer>
+
+  <!-- Supabase JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
