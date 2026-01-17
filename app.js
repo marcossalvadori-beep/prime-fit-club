@@ -13,10 +13,7 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // 2) LINKS DE PAGAMENTO (MERCADO PAGO OU OUTRO)
 // ============================
 // Defina aqui seus links de pagamento. Esses links podem ser do Mercado Pago, Hotmart, etc.
-const PAY_LINKS = {
-  monthly:"https://mpago.la/28D3VGe",
-
-};
+const PAY_LINKS = {monthly:"https://mpago.la/28D3VGe"};
 
 // ============================
 // 3) CATÁLOGO DE TREINOS (MVP)
