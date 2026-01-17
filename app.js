@@ -211,10 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("btnBackHome").addEventListener("click", () => showScreen("home"));
   // Botões de plano: abre link de pagamento
   $("btnBuyMonthly").addEventListener("click", () => window.location.href = PAY_LINKS.monthly);
-  $("btnBuyQuarter").addEventListener("click", () => window.location.href = PAY_LINKS.quarter);
-  $("btnBuyYear").addEventListener("click", () => window.location.href = PAY_LINKS.year);
-  $("btnRenew").addEventListener("click", () => window.location.href = PAY_LINKS.renew);
-  // Form login
+   // Form login
   $("formLogin").addEventListener("submit", async (e) => {
     e.preventDefault();
     setMsg(loginMsg, "");
