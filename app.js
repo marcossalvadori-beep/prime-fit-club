@@ -2,8 +2,8 @@
 // 1) CONFIGURAÇÃO DO SUPABASE
 // ============================
 // Substitua pelos valores do seu projeto Supabase
-const SUPABASE_URL = window.__ENV?.NEXT_PUBLIC_SUPABASE_URL;
-const SUPABASE_ANON_KEY = window.__ENV?.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const SUPABASE_URL = "https://mgyqvuxeecmfdcmlmtac.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1neXF2dXhlZWNtZmRjbWxtdGFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg1ODUxMjYsImV4cCI6MjA4NDE2MTEyNn0.UWwTXGcVTTxE1YeSCFEvLu22peI2Rc6-ZFqU6Uf4bi8";
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
