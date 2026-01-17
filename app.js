@@ -2,8 +2,8 @@
 // 1) CONFIGURAÇÃO DO SUPABASE
 // ============================
 // Substitua pelos valores do seu projeto Supabase
-const SUPABASE_URL = "https://mgyqvuxeecmfdcmlmtac.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1neXF2dXhlZWNtZmRjbWxtdGFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg1ODUxMjYsImV4cCI6MjA4NDE2MTEyNn0.UWwTXGcVTTxE1YeSCFEvLu22peI2Rc6-ZFqU6Uf4bi8";
+const SUPABASE_URL ="https://mgyqvuxeecmfdcmlmtac.supabase.co";
+const SUPABASE_ANON_KEY ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1neXF2dXhlZWNtZmRjbWxtdGFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg1ODUxMjYsImV4cCI6MjA4NDE2MTEyNn0.UWwTXGcVTTxE1YeSCFEvLu22peI2Rc6-ZFqU6Uf4bi8";
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -14,10 +14,10 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // ============================
 // Defina aqui seus links de pagamento. Esses links podem ser do Mercado Pago, Hotmart, etc.
 const PAY_LINKS = {
-  monthly: "https://mpago.la/28D3VGe",
-  quarter: "https://mpago.la/14GqzKM",
-  year: "https://mpago.la/1dBzLfJ",
-  renew: "https://mpago.la/28D3VGe"
+  monthly:"https://mpago.la/28D3VGe",
+  quarter:"https://mpago.la/14GqzKM",
+  year:"https://mpago.la/1dBzLfJ",
+  renew:"https://mpago.la/28D3VGe"
 };
 
 // ============================
