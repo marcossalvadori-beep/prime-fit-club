@@ -14,10 +14,10 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // ============================
 // Defina aqui seus links de pagamento. Esses links podem ser do Mercado Pago, Hotmart, etc.
 const PAY_LINKS = {
-  monthly: "COLOQUE_AQUI_LINK_PAGAMENTO_MENSAL",
-  quarter: "COLOQUE_AQUI_LINK_PAGAMENTO_TRIMESTRAL",
-  year: "COLOQUE_AQUI_LINK_PAGAMENTO_ANUAL",
-  renew: "COLOQUE_AQUI_LINK_RENOVACAO"
+  monthly: "https://mpago.la/28D3VGe",
+  quarter: "https://mpago.la/14GqzKM",
+  year: "https://mpago.la/1dBzLfJ",
+  renew: "https://mpago.la/28D3VGe"
 };
 
 // ============================
